@@ -28,14 +28,14 @@
 </template>
 
 <script>
-import MullvadIcon from './mullvad-icon.svg'
+import MullvadIcon from './mullvad-icon.svg';
 import WidgetMixin from '@/mixins/WidgetMixin';
 import { widgetApiEndpoints } from '@/utils/defaults';
 
 export default {
   mixins: [WidgetMixin],
   components: {
-    MullvadIcon
+    MullvadIcon,
   },
   computed: {
     endpoint() {
