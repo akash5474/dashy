@@ -261,6 +261,7 @@
         </a>
     </td>
     <td align="center">
+<<<<<<< HEAD
         <a href="https://github.com/josuablejeru">
             <img src="https://avatars.githubusercontent.com/u/37913833?v=4" width="80;" alt="josuablejeru"/>
             <br />
@@ -268,6 +269,14 @@
         </a>
     </td></tr>
 <tr>
+=======
+        <a href="https://github.com/akash5474">
+            <img src="https://avatars.githubusercontent.com/u/4884999?v=4" width="80;" alt="akash5474"/>
+            <br />
+            <sub><b>Akash Pannu</b></sub>
+        </a>
+    </td>
+>>>>>>> b47f9246 (:purple_heart: Updates contributors list)
     <td align="center">
         <a href="https://github.com/walkxcode">
             <img src="https://avatars.githubusercontent.com/u/71191962?v=4" width="80;" alt="walkxcode"/>
@@ -326,6 +335,14 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/jammo2k5">
+            <img src="https://avatars.githubusercontent.com/u/8106602?v=4" width="80;" alt="jammo2k5"/>
+            <br />
+            <sub><b>jammo2k5</b></sub>
+        </a>
+    </td></tr>
+<tr>
+    <td align="center">
         <a href="https://github.com/UrekD">
             <img src="https://avatars.githubusercontent.com/u/38784343?v=4" width="80;" alt="UrekD"/>
             <br />
@@ -375,6 +392,7 @@
             <sub><b>Remygrandin</b></sub>
         </a>
     </td>
+<<<<<<< HEAD
     <td align="center">
         <a href="https://github.com/DimitriDR">
             <img src="https://avatars.githubusercontent.com/u/56969769?v=4" width="80;" alt="DimitriDR"/>
@@ -397,6 +415,8 @@
         </a>
     </td></tr>
 <tr>
+=======
+>>>>>>> b47f9246 (:purple_heart: Updates contributors list)
     <td align="center">
         <a href="https://github.com/rubenandre">
             <img src="https://avatars.githubusercontent.com/u/9402773?v=4" width="80;" alt="rubenandre"/>
@@ -417,7 +437,8 @@
             <br />
             <sub><b>ᗪєνιη ᗷυнʟ</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/stanly0726">
             <img src="https://avatars.githubusercontent.com/u/37040069?v=4" width="80;" alt="stanly0726"/>
@@ -438,8 +459,7 @@
             <br />
             <sub><b>Jakub Tuzar</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/berksmbl">
             <img src="https://avatars.githubusercontent.com/u/10000339?v=4" width="80;" alt="berksmbl"/>
@@ -582,7 +602,8 @@
             <br />
             <sub><b>Alexander Mnich</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/alexdelprete">
             <img src="https://avatars.githubusercontent.com/u/7027842?v=4" width="80;" alt="alexdelprete"/>
@@ -1040,8 +1061,7 @@
             <br />
             <sub><b>Jeremy Chauvin</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/Hellhium">
             <img src="https://avatars.githubusercontent.com/u/11504877?v=4" width="80;" alt="Hellhium"/>
@@ -1062,6 +1082,7 @@
             <br />
             <sub><b>Ishan Jain</b></sub>
         </a>
+<<<<<<< HEAD
     </td>
     <td align="center">
         <a href="https://github.com/Compunctus">
@@ -1119,6 +1140,8 @@
             <br />
             <sub><b>Ethan Hann</b></sub>
         </a>
+=======
+>>>>>>> b47f9246 (:purple_heart: Updates contributors list)
     </td></tr>
 </table>
 <!-- readme: contributors -end -->
