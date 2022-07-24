@@ -1,14 +1,7 @@
 <template>
 <div class="mullvad-wrapper" v-if="mullvadInfo">
-  <h4 v-if="title">{{ title }}</h4>
-  <p v-if="mullvadInfo.isMullvad" class="status connected">
-    <MullvadIcon class="tile-icon large"/>
-    Connected
-  </p>
-  <p v-else class="status not-connected">
-    <MullvadIcon class="tile-icon large"/>
-    Not Connected
-  </p>
+  <p v-if="mullvadInfo.isMullvad"  class="status connected"><span>✔</span> Connected</p>
+  <p v-else class="status not-connected"><span>✘</span> Not Connected</p>
   <div class="connection-info">
     <p><span class="lbl">IP</span><span class="val">{{ mullvadInfo.ip }}</span></p>
     <p v-if="mullvadInfo.host">
@@ -28,21 +21,14 @@
 </template>
 
 <script>
-import MullvadIcon from './mullvad-icon.svg'
 import WidgetMixin from '@/mixins/WidgetMixin';
 import { widgetApiEndpoints } from '@/utils/defaults';
 
 export default {
   mixins: [WidgetMixin],
-  components: {
-    MullvadIcon
-  },
   computed: {
     endpoint() {
       return widgetApiEndpoints.mullvad;
-    },
-    title() {
-      return this.options.title || null;
     },
   },
   data() {
@@ -76,14 +62,6 @@ export default {
   color: var(--widget-text-color);
   cursor: default;
 
-  h4 {
-    display: flex;
-    max-width: 250px;
-    font-size: 1.2rem;
-    align-items: center;
-    margin: 0.25rem auto 0.5rem;
-    justify-content: center;
-  }
   .status {
     display: flex;
     max-width: 250px;
@@ -101,21 +79,11 @@ export default {
     }
     &.not-connected {
       color: var(--danger);
-      svg {
-        path:nth-child(3),
-        path:nth-child(4) {
-          fill: var(--danger);
-        }
-      }
+      span { background: var(--danger); }
     }
     &.connected {
       color: var(--success);
-      svg {
-        path:nth-child(3),
-        path:nth-child(4) {
-          fill: var(--success);
-        }
-      }
+      span { background: var(--success); }
     }
   }
   .connection-info {
