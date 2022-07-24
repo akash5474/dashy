@@ -76,7 +76,7 @@ export default {
   color: var(--widget-text-color);
   cursor: default;
 
-  .h4 {
+  h4 {
     display: flex;
     max-width: 250px;
     font-size: 1.2rem;
