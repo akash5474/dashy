@@ -1,10 +1,13 @@
 <template>
 <div class="mullvad-wrapper" v-if="mullvadInfo">
-  <p v-if="mullvadInfo.isMullvad"  class="status connected">
-    <MullvadIcon class="tile-icon large"/> Connected
+  <h4 v-if="title">{{ title }}</h4>
+  <p v-if="mullvadInfo.isMullvad" class="status connected">
+    <MullvadIcon class="tile-icon large"/>
+    Connected
   </p>
-  <p v-else  class="status not-connected">
-    <MullvadIcon class="tile-icon large"/> Not Connected
+  <p v-else class="status not-connected">
+    <MullvadIcon class="tile-icon large"/>
+    Not Connected
   </p>
   <div class="connection-info">
     <p><span class="lbl">IP</span><span class="val">{{ mullvadInfo.ip }}</span></p>
@@ -38,6 +41,9 @@ export default {
     endpoint() {
       return widgetApiEndpoints.mullvad;
     },
+    title() {
+      return this.options.title || null;
+    },
   },
   data() {
     return {
@@ -70,6 +76,14 @@ export default {
   color: var(--widget-text-color);
   cursor: default;
 
+  .h4 {
+    display: flex;
+    max-width: 250px;
+    font-size: 1.2rem;
+    align-items: center;
+    margin: 0.25rem auto 0.5rem;
+    justify-content: center;
+  }
   .status {
     display: flex;
     max-width: 250px;
