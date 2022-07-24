@@ -348,12 +348,6 @@ p.description {
       width: 2.5rem;
       margin-bottom: 0.25rem;
     }
-    .status-indicator {
-      bottom: 0;
-      left: 0;
-      top: auto;
-      right: auto;
-    }
     .tile-title {
       min-width: 100px;
       max-width: 160px;
