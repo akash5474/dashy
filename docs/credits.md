@@ -261,7 +261,6 @@
         </a>
     </td>
     <td align="center">
-<<<<<<< HEAD
         <a href="https://github.com/josuablejeru">
             <img src="https://avatars.githubusercontent.com/u/37913833?v=4" width="80;" alt="josuablejeru"/>
             <br />
@@ -269,14 +268,13 @@
         </a>
     </td></tr>
 <tr>
-=======
-        <a href="https://github.com/akash5474">
-            <img src="https://avatars.githubusercontent.com/u/4884999?v=4" width="80;" alt="akash5474"/>
+    <td align="center">
+        <a href="https://github.com/kashif-se">
+            <img src="https://avatars.githubusercontent.com/u/5568138?v=4" width="80;" alt="kashif-se"/>
             <br />
-            <sub><b>Akash Pannu</b></sub>
+            <sub><b>Kashif Sohail</b></sub>
         </a>
     </td>
->>>>>>> b47f9246 (:purple_heart: Updates contributors list)
     <td align="center">
         <a href="https://github.com/walkxcode">
             <img src="https://avatars.githubusercontent.com/u/71191962?v=4" width="80;" alt="walkxcode"/>
@@ -338,7 +336,7 @@
         <a href="https://github.com/jammo2k5">
             <img src="https://avatars.githubusercontent.com/u/8106602?v=4" width="80;" alt="jammo2k5"/>
             <br />
-            <sub><b>jammo2k5</b></sub>
+            <sub><b>Jammo2k5</b></sub>
         </a>
     </td></tr>
 <tr>
