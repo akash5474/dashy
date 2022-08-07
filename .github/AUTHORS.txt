@@ -143,7 +143,6 @@ kristian <kristianbrasel@gmail.com> - 6 commits
 Erik <roo> - 6 commits
 Jammo2k5 <jammo2k5@hotmail.co.uk> - 6 commits
 Leonardo <ovarrubia> - 6 commits
->>>>>>> 1bd4eb84 (:blue_heart: Makes author list)
 liss-bot <liss-bot@users.noreply.github.com> - 6 commits
 Josua Blejeru <josua@blejeru.com> - 8 commits
 Tobias <tobias.meier109@gmail.com> - 8 commits
