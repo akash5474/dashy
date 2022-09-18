@@ -390,7 +390,6 @@
             <sub><b>Remygrandin</b></sub>
         </a>
     </td>
-<<<<<<< HEAD
     <td align="center">
         <a href="https://github.com/DimitriDR">
             <img src="https://avatars.githubusercontent.com/u/56969769?v=4" width="80;" alt="DimitriDR"/>
@@ -413,8 +412,6 @@
         </a>
     </td></tr>
 <tr>
-=======
->>>>>>> b47f9246 (:purple_heart: Updates contributors list)
     <td align="center">
         <a href="https://github.com/rubenandre">
             <img src="https://avatars.githubusercontent.com/u/9402773?v=4" width="80;" alt="rubenandre"/>
