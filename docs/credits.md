@@ -1077,7 +1077,6 @@
             <br />
             <sub><b>Ishan Jain</b></sub>
         </a>
-<<<<<<< HEAD
     </td>
     <td align="center">
         <a href="https://github.com/Compunctus">
@@ -1135,8 +1134,6 @@
             <br />
             <sub><b>Ethan Hann</b></sub>
         </a>
-=======
->>>>>>> b47f9246 (:purple_heart: Updates contributors list)
     </td></tr>
 </table>
 <!-- readme: contributors -end -->
