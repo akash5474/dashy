@@ -239,6 +239,7 @@ module.exports = {
     holidays: 'https://kayaposoft.com/enrico/json/v2.0/?action=getHolidaysForDateRange',
     jokes: 'https://v2.jokeapi.dev/joke/',
     news: 'https://api.currentsapi.services/v1/latest-news',
+    airvpn: 'https://airvpn.org/api/whatismyip',
     mullvad: 'https://am.i.mullvad.net/json',
     mvg: 'https://www.mvg.de/api/fib/v2/',
     publicIp: 'https://ipapi.co/json',
