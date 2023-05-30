@@ -81,6 +81,7 @@ const COMPAT = {
   iframe: 'IframeWidget',
   image: 'ImageWidget',
   joke: 'Jokes',
+  'airvpn-status': 'AirvpnStatus',
   'mullvad-status': 'MullvadStatus',
   'nd-cpu-history': 'NdCpuHistory',
   'nd-load-history': 'NdLoadHistory',
