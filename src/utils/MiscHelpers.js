@@ -64,8 +64,8 @@ export const getCountryFlag = (countryCode, dimens) => {
 
 /* Given a currency code, return path to corresponding countries flag icon */
 export const getCurrencyFlag = (currency) => {
-  const cdn = 'https://raw.githubusercontent.com/transferwise/currency-flags';
-  return `${cdn}/master/src/flags/${currency.toLowerCase()}.png`;
+  const cdn = 'https://raw.githubusercontent.com/Lissy93/currency-flags';
+  return `${cdn}/master/assets/flags_png_rectangle/${currency.toLowerCase()}.png`;
 };
 
 /* Given a Latitude & Longitude object, and optional zoom level, return link to OSM */
@@ -163,6 +163,11 @@ export const getTimeAgo = (dateTime) => {
 export const getValueFromCss = (colorVar) => {
   const cssProps = getComputedStyle(document.documentElement);
   return cssProps.getPropertyValue(`--${colorVar}`).trim();
+};
+
+/* Given a temperature in Celsius, returns value in Fahrenheit */
+export const celsiusToFahrenheit = (celsius) => {
+  return Math.round((celsius * 1.8) + 32);
 };
 
 /* Given a temperature in Fahrenheit, returns value in Celsius */
