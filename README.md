@@ -30,7 +30,7 @@
 <details>
   <summary><b>Table of Contents</b></summary>
   <p>
-  
+
 - **Getting Started**
   - [🌈 Features](#features-)
   - [⚡Demo](#demo-)
@@ -60,7 +60,7 @@
   - [🛣️ Roadmap](#roadmap-)
   - [🙌 Alternatives](#alternatives-)
   - [📜 License](#license-)
-    
+
   </p>
 </details>
 
@@ -81,7 +81,7 @@
 - 🖼️ Options for a full-screen background image, custom nav-bar links, HTML footer, title, etc.
 - 🚀 Easy to setup with Docker, or on bare metal, or with 1-Click cloud deployment
 - ⚙️ Easy single-file YAML-based configuration, and option to configure app through the UI
-- ✨ Under active development with improvements and new features added regularly 
+- ✨ Under active development with improvements and new features added regularly
 - 🤏 Small bundle size, fully responsive UI, and PWA for basic offline access
 - 🆓 100% free and open-source
 - 🔐 Strong focus on privacy
@@ -287,7 +287,7 @@ Other access control systems are also supported, see the [Alternative Auth Metho
 As well as the default homepage, there is also:
 - A minimal view, valid for use as a browser start page
 - A workspace view, useful for visiting many apps simultaneously
-	
+
 You can change the view from the UI, using the switch icon in the top-right corner, or select a default view in the config under `appConfig.startingView` attribute.
 
 <p align="center">
@@ -470,7 +470,7 @@ If running on bare metal, Dashy requires [Node](https://nodejs.org/en/) V 16.0.0
 
 If running in Docker container, the recommended base image is Alpine (3.15)
 
-The hardware requirements vary depending on where and how you are running Dashy. Generally speaking, on a bare-metal system or Docker container, 1GB of memory should be more than enough, and depending on whether you are using your own assets, then 1GB of disk space should be sufficient. 
+The hardware requirements vary depending on where and how you are running Dashy. Generally speaking, on a bare-metal system or Docker container, 1GB of memory should be more than enough, and depending on whether you are using your own assets, then 1GB of disk space should be sufficient.
 
 If you are using one of the 1-click cloud deployment methods, serving the app through a CDN or using a static hosting provider, then there are no specific requirements, as the built app is just a series of static JS files, and so is very light-weight.
 
@@ -723,7 +723,7 @@ For past updates, see the [**Changelog**](/.github/CHANGELOG.md)
 
 ## Alternatives 🙌
 
-A few self-hosted web apps serve a similar purpose to Dashy. If you're looking for a dashboard, and Dashy doesn't meet your needs, I highly recommend you check these projects out! 
+A few self-hosted web apps serve a similar purpose to Dashy. If you're looking for a dashboard, and Dashy doesn't meet your needs, I highly recommend you check these projects out!
 - [Flame](https://github.com/pawelmalak/flame) by @pawelmalak (`MIT`)
 - [HomeDash2](https://lamarios.github.io/Homedash2)
 - [Homer](https://github.com/bastienwirtz/homer) (`Apache License 2.0`)

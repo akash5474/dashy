@@ -169,6 +169,13 @@
         </a>
     </td>
     <td align="center">
+        <a href="https://github.com/akash5474">
+            <img src="https://avatars.githubusercontent.com/u/4884999?v=4" width="80;" alt="akash5474"/>
+            <br />
+            <sub><b>Akash Pannu</b></sub>
+        </a>
+    </td>
+    <td align="center">
         <a href="https://github.com/kashif-se">
             <img src="https://avatars.githubusercontent.com/u/5568138?v=4" width="80;" alt="kashif-se"/>
             <br />
@@ -303,7 +310,8 @@
             <br />
             <sub><b>ᗪєνιη ᗷυнʟ</b></sub>
         </a>
-    </td>
+    </td></tr>
+<tr>
     <td align="center">
         <a href="https://github.com/alexdelprete">
             <img src="https://avatars.githubusercontent.com/u/7027842?v=4" width="80;" alt="alexdelprete"/>
@@ -324,8 +332,7 @@
             <br />
             <sub><b>Stephen Rigney</b></sub>
         </a>
-    </td></tr>
-<tr>
+    </td>
     <td align="center">
         <a href="https://github.com/moemoeq">
             <img src="https://avatars.githubusercontent.com/u/1808434?v=4" width="80;" alt="moemoeq"/>
