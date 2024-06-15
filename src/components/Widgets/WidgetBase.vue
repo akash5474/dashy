@@ -52,6 +52,7 @@ const COMPAT = {
   clock: 'Clock',
   'crypto-price-chart': 'CryptoPriceChart',
   'crypto-watch-list': 'CryptoWatchList',
+  'custom-search': 'CustomSearch',
   'cve-vulnerabilities': 'CveVulnerabilities',
   'domain-monitor': 'DomainMonitor',
   'code-stats': 'CodeStats',
@@ -66,18 +67,21 @@ const COMPAT = {
   'gl-alerts': 'GlAlerts',
   'gl-current-cores': 'GlCpuCores',
   'gl-current-cpu': 'GlCpuGauge',
+  'gl-cpu-speedometer': 'GlCpuSpeedometer',
   'gl-cpu-history': 'GlCpuHistory',
   'gl-disk-io': 'GlDiskIo',
   'gl-disk-space': 'GlDiskSpace',
   'gl-ip-address': 'GlIpAddress',
   'gl-load-history': 'GlLoadHistory',
   'gl-current-mem': 'GlMemGauge',
+  'gl-mem-speedometer': 'GlMemSpeedometer',
   'gl-mem-history': 'GlMemHistory',
   'gl-network-interfaces': 'GlNetworkInterfaces',
   'gl-network-traffic': 'GlNetworkTraffic',
   'gl-system-load': 'GlSystemLoad',
   'gl-cpu-temp': 'GlCpuTemp',
   'health-checks': 'HealthChecks',
+  'hackernews-trending': 'HackernewsTrending',
   'gluetun-status': 'GluetunStatus',
   iframe: 'IframeWidget',
   image: 'ImageWidget',
@@ -100,8 +104,10 @@ const COMPAT = {
   'pi-hole-stats': 'PiHoleStats',
   'pi-hole-top-queries': 'PiHoleTopQueries',
   'pi-hole-traffic': 'PiHoleTraffic',
+  'proxmox-lists': 'Proxmox',
   'public-holidays': 'PublicHolidays',
   'public-ip': 'PublicIp',
+  'rescue-time': 'RescueTime',
   'rss-feed': 'RssFeed',
   sabnzbd: 'Sabnzbd',
   'sports-scores': 'SportsScores',
@@ -110,6 +116,7 @@ const COMPAT = {
   'synology-download': 'SynologyDownload',
   'system-info': 'SystemInfo',
   'tfl-status': 'TflStatus',
+  'uptime-kuma': 'UptimeKuma',
   'wallet-balance': 'WalletBalance',
   weather: 'Weather',
   'weather-forecast': 'WeatherForecast',
@@ -200,14 +207,16 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import '@/styles/media-queries.scss';
+@import "@/styles/media-queries.scss";
+
 .widget-base {
   position: relative;
   padding: 0.75rem 0.5rem 0.5rem 0.5rem;
   background: var(--widget-base-background);
   box-shadow: var(--widget-base-shadow, none);
+
   // Refresh and full-page action buttons
-  button.action-btn  {
+  button.action-btn {
     height: 1rem;
     min-width: auto;
     width: 1.75rem;
@@ -218,21 +227,26 @@ export default {
     border: none;
     opacity: var(--dimming-factor);
     color: var(--widget-text-color);
+
     &:hover {
       opacity: 1;
       color: var(--widget-background-color);
     }
+
     &.update-btn {
       right: -0.25rem;
     }
+
     &.open-btn {
       right: 1.75rem;
     }
   }
+
   // Optional widget label
   .widget-label {
     color: var(--widget-text-color);
   }
+
   // Actual widget container
   .widget-wrap {
     &.has-error {
@@ -240,9 +254,11 @@ export default {
       opacity: 0.5;
       border-radius: var(--curve-factor);
       background: #ffff0040;
+
       &:hover { background: none; }
     }
   }
+
   // Error message output
   .widget-error {
     p.error-msg {
@@ -251,12 +267,14 @@ export default {
       font-size: 1rem;
       margin: 0 auto 0.5rem auto;
     }
+
     p.error-output {
       font-family: var(--font-monospace);
       color: var(--widget-text-color);
       font-size: 0.85rem;
       margin: 0.5rem auto;
     }
+
     p.retry-link {
       cursor: pointer;
       text-decoration: underline;
@@ -265,14 +283,17 @@ export default {
       margin: 0;
     }
   }
+
   // Loading spinner
   .loading {
     margin: 0.2rem auto;
     text-align: center;
+
     svg.loader {
       width: 100px;
     }
   }
+
   // Hide widget contents while loading
   &.is-loading {
     .widget-wrap {
@@ -280,5 +301,4 @@ export default {
     }
   }
 }
-
 </style>

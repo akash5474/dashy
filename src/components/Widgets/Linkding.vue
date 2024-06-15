@@ -30,11 +30,11 @@ export default {
   computed: {
     endpoint() {
       if (!this.options.host) this.error('linkgding Host is required');
-      return `${this.options.host}/api/bookmarks`;
+      return `${this.parseAsEnvVar(this.options.host)}/api/bookmarks`;
     },
     apiKey() {
       if (!this.options.apiKey) this.error('linkgding apiKey is required');
-      return this.options.apiKey;
+      return this.parseAsEnvVar(this.options.apiKey);
     },
     filtertags() {
       return this.options.tags;
@@ -54,7 +54,7 @@ export default {
     },
     processData(data) {
       const self = this;
-      const fltr = function (entry) {
+      const fltr = (entry) => {
         if (self.filtertags === null) return true;
         for (let i = 0; i < self.filtertags.length; i += 1) {
           if (entry.tag_names.includes(self.filtertags[i])) return true;

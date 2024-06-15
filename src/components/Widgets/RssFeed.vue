@@ -51,7 +51,7 @@ export default {
       return this.options.rssUrl || '';
     },
     apiKey() {
-      return this.options.apiKey;
+      return this.parseAsEnvVar(this.options.apiKey);
     },
     parseLocally() {
       return this.options.parseLocally;
@@ -104,7 +104,9 @@ export default {
     async processData(data) {
       if (this.parseLocally) {
         const parser = new Parser();
-        const { link, title, items, author, description, image } = await parser.parseString(data);
+        const {
+          link, title, items, author, description, image,
+        } = await parser.parseString(data);
         this.meta = {
           title,
           link,

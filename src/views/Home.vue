@@ -19,44 +19,38 @@
       </router-link>
     </div>
     <!-- Main content, section for each group of items -->
-    <div v-if="checkTheresData(sections) || isEditMode"
-      :class="`item-group-container `
-        + `orientation-${layout} `
-        + `item-size-${itemSizeBound} `
-        + (isEditMode ? 'edit-mode ' : '')
-        + (singleSectionView ? 'single-section-view ' : '')
-        + (this.colCount ? `col-count-${this.colCount} ` : '')"
-      >
-      <template v-for="(section, index) in filteredTiles">
+    <div v-if="checkTheresData(sections) || isEditMode" :class="computedClass">
+      <template v-for="(section, index) in filteredSections">
         <Section
           :key="index"
           :index="index"
           :title="section.name"
           :icon="section.icon || undefined"
           :displayData="getDisplayData(section)"
-          :groupId="`${pageId}-section-${index}`"
-          :items="filterTiles(section.items, searchValue)"
+          :groupId="makeSectionId(section)"
+          :items="section.filteredItems"
           :widgets="section.widgets"
           :searchTerm="searchValue"
           :itemSize="itemSizeBound"
           @itemClicked="finishedSearching()"
           @change-modal-visibility="updateModalVisibility"
           :isWide="!!singleSectionView || layoutOrientation === 'horizontal'"
-          :class="
-          (searchValue && filterTiles(section.items, searchValue).length === 0) ? 'no-results' : ''"
+          :class="(searchValue && section.filteredItems.length === 0) ? 'no-results' : ''"
         />
       </template>
       <!-- Show add new section button, in edit mode -->
       <AddNewSection v-if="isEditMode && !singleSectionView" />
     </div>
     <!-- Show message when there's no data to show -->
-    <div v-if="checkIfResults() && !isEditMode" class="no-data">
+    <div v-if="checkIfResults(filteredSections) && !isEditMode" class="no-data">
       {{searchValue ? $t('home.no-results') : $t('home.no-data')}}
     </div>
     <!-- Show banner at bottom of screen, for Saving config changes -->
     <EditModeSaveMenu v-if="isEditMode" />
     <!-- Modal for viewing and exporting configuration file -->
     <ExportConfigMenu />
+    <!-- Shows pertinent info -->
+    <NotificationThing v-if="$store.state.isUsingLocalConfig"/>
   </div>
 </template>
 
@@ -67,8 +61,9 @@ import Section from '@/components/LinkItems/Section.vue';
 import EditModeSaveMenu from '@/components/InteractiveEditor/EditModeSaveMenu.vue';
 import ExportConfigMenu from '@/components/InteractiveEditor/ExportConfigMenu.vue';
 import AddNewSection from '@/components/InteractiveEditor/AddNewSectionLauncher.vue';
+import NotificationThing from '@/components/Settings/LocalConfigWarning.vue';
 import StoreKeys from '@/utils/StoreMutations';
-import { localStorageKeys, modalNames } from '@/utils/defaults';
+import { modalNames } from '@/utils/defaults';
 import ErrorHandler from '@/utils/ErrorHandler';
 import BackIcon from '@/assets/interface-icons/back-arrow.svg';
 
@@ -80,6 +75,7 @@ export default {
     EditModeSaveMenu,
     ExportConfigMenu,
     AddNewSection,
+    NotificationThing,
     Section,
     BackIcon,
   },
@@ -100,10 +96,14 @@ export default {
       if (colCount > 8) colCount = 8;
       return colCount;
     },
-    /* Return all sections, that match users search term */
-    filteredTiles() {
+    /* Return sections with filtered items, that match users search term */
+    filteredSections() {
       const sections = this.singleSectionView || this.sections;
-      return sections.filter((section) => this.filterTiles(section.items, this.searchValue));
+      return sections.map((_section) => {
+        const section = _section;
+        section.filteredItems = this.filterTiles(section.items, this.searchValue);
+        return section;
+      });
     },
     /* Updates layout (when button clicked), and saves in local storage */
     layoutOrientation() {
@@ -113,15 +113,13 @@ export default {
     iconSize() {
       return this.$store.getters.iconSize;
     },
-  },
-  watch: {
-    layoutOrientation(layout) {
-      localStorage.setItem(localStorageKeys.LAYOUT_ORIENTATION, layout);
-      this.layout = layout;
-    },
-    iconSize(size) {
-      localStorage.setItem(localStorageKeys.ICON_SIZE, size);
-      this.itemSizeBound = size;
+    computedClass() {
+      let classes = 'item-group-container '
+      + ` orientation-${this.$store.getters.layout} item-size-${this.itemSizeBound}`;
+      if (this.isEditMode) classes += ' edit-mode';
+      if (this.singleSectionView) classes += ' single-section-view';
+      if (this.colCount) classes += ` col-count-${this.colCount}`;
+      return classes;
     },
   },
   methods: {
